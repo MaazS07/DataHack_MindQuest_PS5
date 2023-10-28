@@ -1,0 +1,121 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.first
+{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+   background: linear-gradient(white, grey);
+ 
+
+}
+.first nav
+{
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    margin-top: 2vh;
+
+ 
+
+}
+.first nav h2 {
+ font-size: 5vh;
+margin-left: 3vw;
+ margin-top: 3vh;
+}
+
+.first nav ul{
+    display: flex;
+    justify-content:center;
+    margin-top: 3vh;
+
+    
+}
+.first nav ul li{
+    list-style-type: none;
+       /* padding:  0vh 3vw; */
+}
+.first nav ul li a{
+       text-transform: capitalize;
+       color:black;
+       text-decoration: none;
+       padding:  0vh 1vw; 
+       font-size: 3vh;
+       transition: all 500ms ease;
+}
+.first nav ul li :hover,:focus
+{
+    color: lightslategray;
+    border-bottom: 2px solid lightslategray;
+    transition: all 500ms ease;
+}
+
+
+ #bt1
+{
+    border:none;
+    text-align: center;
+    font-size: 2vh;
+    padding: 20px;
+    background-color:gray;
+    color: rgb(12, 1, 1);
+}
+
+.first .main
+{
+display: flex;
+justify-content: center;
+width: 100vw;
+height: 80vh;
+gap: 4vw;
+}
+.main .main1 
+{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 70vh;
+    width: 40vw;
+ 
+    flex-direction: column;
+}
+.main1 h2
+{
+    color: black;
+  font-size: 8vh;
+    font-weight: bold;
+    width: 30vw;
+    padding-bottom: 10vh;
+    text-align: center;
+
+}
+.main1 p{
+    width: 30vw;
+    color: grey;
+    height: 40vh;
+    font-size: 3.5vh;
+
+}
+#get-started
+{
+    padding: 2vh;
+    color: black;
+    background:linear-gradient(orange ,rgb(182, 182, 229));
+    box-shadow: 2px 2px  grey;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+.main2 img{
+    height: 40vh;
+    width: 50vw;
+    object-fit: contain;
+}

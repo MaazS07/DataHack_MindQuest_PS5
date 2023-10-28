@@ -1,0 +1,188 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #username {
+            font-size: 7vh;
+            margin-bottom: 5vw;
+
+        }
+
+        #upload-form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #upload-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        /* Styles for the file input */
+        #file-input {
+            display: none;
+        }
+
+        label[for="file-input"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .dashboard-list li
+        {
+         font-size: 6vh;
+         color: black;
+         list-style-type:none ;
+         padding: 2vh;
+
+        
+
+        }
+        .dashboard-list a{
+            text-decoration: none;
+
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <div id="sidebar">
+            <h1 id="username">Username</h1>
+            <ul class="dashboard-list">
+                <a href="./index.html" target="_blank"><li>Home</li></a>
+                <a href="#"><li>Portfolio</li></a>
+                <a href="#"><li>Conatct</li></a>
+                <a href="#"><li>Blogs</li></a>
+                
+            </ul>
+        </div>
+        <div id="content">
+            <h1>Dashboard</h1>
+            <div id="upload-form">
+                <h2>Upload a PDF File</h2>
+                <label for="file-input">Choose File</label>
+                <input type="file" id="fileInput" accept=".pdf, .jpg, .jpeg, .png, .gif" onchange="validateFile()">
+                <p id="errorMessage" style="color: red;"></p>
+                <button id="upload-btn">Upload</button>
+                <p id="error-message"></p>
+            </div>
+        <div class="keywords">
+        
+        </div>
+        </div>
+    </div>
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const fileInput = document.getElementById('file-input');
+        const errorMessage = document.getElementById('error-message');
+        const keywords=document.querySelector(".keywords")
+        let keys=[];
+
+
+
+        // uploadBtn.addEventListener('click', () => {
+        //     if (fileInput.files.length === 0) {
+        //         errorMessage.textContent = 'Please select a file.';
+        //     } else {
+        //         const file = fileInput.files[0];
+        //         if (file.type !== 'application/pdf') {
+        //             errorMessage.textContent = 'Error: Only PDF files are allowed.';
+        //         } 
+                
+        //         else if(file.type == 'application/pdf')  {
+        //             errorMessage.textContent = 'Your file has been set successfully ';
+        //             // Handle the file upload here "pdf", "jpg", "jpeg", "png", "gif"
+        //         }
+        //         else  {
+        //             errorMessage.textContent = '';
+        //             // Handle the file upload here "pdf", "jpg", "jpeg", "png", "gif"
+        //         }
+                
+        //     }
+          
+    
+            // keywords.forEach(function(args){
+            // let abc=document.createElement("p")
+            // args.classList.add('keys')
+            
+            // keys.appendChild(abc)
+            // })
+           
+
+        // });
+
+
+        function validateFile() {
+            const fileInput = document.getElementById("fileInput");
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (fileInput.files.length > 0) {
+                const allowedExtensions = ["pdf", "jpg", "jpeg", "png", "gif"];
+                const fileName = fileInput.files[0].name;
+                const fileExtension = fileName.split('.').pop().toLowerCase();
+
+                if (allowedExtensions.includes(fileExtension) || fileInput.files[0].type === 'application/pdf') {
+                    errorMessage.textContent = ""; // Reset the error message
+                } else {
+                    errorMessage.textContent = "Please select a valid PDF or image file.";
+                    fileInput.value = ""; // Clear the file input
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+        </div>
+    </body>
+    </html>
+</body>
+</html>
+<script>
+   
+</script>
+</body>
+</html>
